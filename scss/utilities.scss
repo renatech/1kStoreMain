@@ -1,0 +1,9 @@
+/*
+** Anchors
+**/
+.anchor--dark{
+    color: $gray-600;
+}
+.anchor--dark:hover, .anchor--dark:focus{
+    color: black;   
+}

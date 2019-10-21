@@ -1,0 +1,154 @@
+/*
+**String Breakpoint
+**@description - Execute a mixins and functions based on the display type in string (class)
+*/
+@mixin stringBreakpoint($displayClass){
+    //Display for smaller mobile devices
+    @if $displayClass == xs{
+        @media(max-width: 767px){ @content };
+    }
+    //display for larger mobile devices
+    @else if $displayClass == sm{
+        @media(min-width: 768px){ @content };
+    }
+    //display for Tablets
+    @else if $displayClass == md{
+        @media(min-width: 991px){ @content };
+    }
+    //display for Laptops or desktops
+    @else if $displayClass == lg{
+        @media(min-width: 1200px){ @content };
+    }
+    @else{
+        @warn "Breaking points for responsiveness are xs, sm, lg, md";
+    }
+}
+
+/*
+**Number Breakpoint
+**@description - Execute a mixins and functions based on the display type in numbers
+*/
+@mixin numberBreakpoint($min : 0, $max : 0){
+    $query: 'all' !default; //default value for the media query
+    //if both the minimum and maximum display value are assigned
+    @if $min != 0 and $max != 0{
+        $query: '(min-width : #{$min}) and (max-width : #{$max})';
+    }
+    //if only the minimum display value is assigned
+    @else if $min != 0 and $max == 0{
+        $query: '(min-width : #{$min})';
+    }
+    //if only the maximum display value is assigned
+    @else if $min == 0 and $max != 0{
+        $query: '(max-width : #{$max})';
+    }
+    @media #{$query}{
+        @content; // CSS rule, mixins or functions
+    }
+}
+
+/*
+**Breakpoint
+**@description - Execute mixins and functions based on the display type
+*/
+@mixin breakpoint($min : 0, $max: 0){
+    //check if the minimum value has string  type value
+    @if type-of($min) == string{
+        @include stringBreakpoint($min){
+            @content;
+        };
+    }
+    //if minimum value is a number type
+    @else if type-of($min) == number{
+        @include numberBreakpoint($min, $max){
+            @content;
+        };
+    }
+}
+
+
+//Padding Mixins
+@mixin padding($loopEnd, $multiplicand : 1, $displayType: '') {
+    //Check type of value for displayType
+    @if type-of($displayType) == number {
+        @warn "The display type value must be a string character";
+    }
+
+    @for $var from 1 through $loopEnd {
+        $val: $var * $multiplicand;
+        .pd-#{$displayType}-#{$val}{
+            padding: #{$val}px ;
+        } 
+        .pd-t-#{$displayType}-#{$val}{
+            padding-top: #{$val}px;
+        }
+        .pd-b-#{$displayType}-#{$val}{
+            padding-bottom: #{$val}px;
+        } 
+        .pd-l-#{$displayType}-#{$val}{  
+            padding-left: #{$val}px;
+        }
+        .pd-r-#{$displayType}-#{$val}{
+            padding-right: #{$val}px;
+        }
+    }
+}
+
+//Margin Mixins
+@mixin margin($loopEnd, $multiplicand : 1, $displayType: '') {
+    //Check type of value for displayType
+    @if type-of($displayType) == number {
+        @warn "The display type value must be a string character";
+    }
+
+    @for $var from 1 through $loopEnd {
+        $val: $var * $multiplicand;
+        .mg-#{$displayType}-#{$val}{
+            margin: #{$val}px ;
+        } 
+        .mg-t-#{$displayType}-#{$val}{
+            margin-top: #{$val}px;
+        }
+        .mg-b-#{$displayType}-#{$val}{
+            margin-bottom: #{$val}px;
+        } 
+        .mg-l-#{$displayType}-#{$val}{  
+            margin-left: #{$val}px;
+        }
+        .mg-r-#{$displayType}-#{$val}{
+            margin-right: #{$val}px;
+        }
+    }
+}
+
+/*
+** responsive texts
+*/
+@mixin responsive-text($loopEnd, $multiplicand : 1, $displayType: '') {
+    //Check type of value for displayType
+    @if type-of($displayType) == number {
+        @warn "The display type value must be a string character";
+    }
+    @for $var from 1 through $loopEnd {
+        $val: $var * $multiplicand;
+        .is-size-#{$displayType}-#{$var}{
+            font-size: #{$val}rem ;
+        } 
+    }
+}
+
+/*
+**Responsive no display
+*/
+@mixin no-display($displayType: '') {
+    @if $displayType = ''{
+        .d-none{
+            display: none
+        }
+    }
+    @else{
+        .d-#{$displayType}-none{
+            display: none
+        }
+    }
+}

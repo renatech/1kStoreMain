@@ -1,0 +1,232 @@
+.hero {
+    background: url(../img/jumbotron.png);
+    background-size: cover;
+    position: relative;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@include breakpoint(md){
+    .hero{
+        height: 70vh;
+    }
+}
+
+/*
+** Notifiers
+**/
+.notifier {
+    display: flex;
+    background: #424242;
+    align-items: center;
+    text-align: center;
+
+    .left,
+    .right {
+        width: 50%;
+        padding: var(--space-1);
+        color: var(--white);
+        padding-left: var(--space-2);
+    }
+
+    .left {
+        background: $primary;
+        -webkit-clip-path: polygon(96% 0, 100% 46%, 96% 100%, 0 100%, 0 0);
+        clip-path: polygon(96% 0, 100% 46%, 96% 100%, 0 100%, 0 0);
+    }
+
+    .right {
+        background: #424242;
+    }
+}
+
+@media(max-width: 576px) {
+    .notifier {
+        font-size: var(--size-2);
+    }
+}
+
+
+/*
+**Social media handle
+*/
+.social {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.social>ul {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    width: 100%;
+    padding: 0px;
+}
+
+
+.social>ul a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: var(--size-5);
+    height: var(--size-5);
+    color: white;
+    background: $gray-600;
+    padding: var(--space-1);
+    margin-right: var(--space-1);
+    margin-bottom: var(--space-1);
+    border: 1px solid var(--black);
+    border-radius: 100%;
+}
+
+.social>ul a:hover,
+.social>ul a:focus {
+    background: black;
+    color: white;
+}
+
+.social-row>p {
+    margin-right: var(--space-3);
+}
+
+/*
+** Custom navbar
+**/
+.custom-nav{
+    position: relative;
+    padding-top: var(--space-2);
+
+    .menu-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 40px;
+        margin-right: 10px;
+
+        span{
+            display: block;
+            width: 100%;
+            margin: 5px;
+            padding: 1px;
+            background: grey;
+        }
+    } 
+
+    .logo{
+        width: 50px;
+        margin-right: auto;
+        @include breakpoint(md){
+            width: 60px;
+            margin-right: 0px;
+        }
+    }
+
+    .primary-navlink{
+        list-style: none;
+        padding: var(--space-2);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        background: white;
+        z-index:3;
+
+        @include breakpoint(md){
+            position: relative;
+            width: auto;
+            display: relative;
+            padding: 0px;
+            background: transparent;
+        }
+
+        ul{
+            .dropdown,.link{
+                margin-bottom: var(--space-2);
+                
+                .dropdown-head{
+                    text-transform: uppercase;
+                    font-size: var(--size-2);
+                    letter-spacing: 5px;
+                    color: black;
+                }
+                .dropdown-arrow{
+                    display: none;
+                }
+                .sublink{
+                    margin-top: var(--space-1);
+                }
+            }
+
+            @include breakpoint(md){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .dropdown,.link{
+                    margin: var(--space-1);
+                    position: relative;
+
+                    .dropdown-head{
+                        text-transform: none;
+                        font-size: 16px;
+                        letter-spacing: 0px;
+                        color: black;
+                    }
+
+                    .dropdown-arrow{
+                        display: inline;
+                    }
+
+                    .sublink{
+                        display: block;
+                        border: 1px solid lightgrey;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                        padding: var(--space-2);
+                        background: white; 
+                        position: absolute;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
+                        -webkit-transition: all 0.3s ease-out;
+                        z-index: 3;
+                    }
+                    &:hover, &:focus{
+                        cursor: pointer;
+                    }
+
+                    &:hover>.sublink, &:focus>.sublink{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+            }
+            list-style: none;
+            padding: 0px;
+        }
+    }
+
+    .secondary-navlink{
+        ul{
+            list-style: none;
+            padding: 0px;
+
+            .link{
+
+            }
+        }
+    }
+}

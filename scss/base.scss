@@ -1,0 +1,20 @@
+//Boostrap Overides
+$body-bg:  #e9ecef;
+$primary: #44AC33;
+$enable-responsive-font-sizes:  true; 
+
+@include responsive-text(15,0.4,'');
+@include margin(20,10);
+@include padding(20,10);
+
+
+@include breakpoint(sm){
+    @include responsive-text(15,0.4,sm);
+    @include margin(20,10,sm);
+    @include padding(20,10,sm);
+}
+@include breakpoint(md){
+    @include responsive-text(15,0.4,md);
+    @include margin(20,10,md);
+    @include padding(20,10,md);
+}

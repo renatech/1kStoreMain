@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /*
+    ** Spacing (Margin and padding)
+    */
+    --space-0: 0px;
+    --space-1: 10px;
+    --space-2: 20px;
+    --space-3: 30px;
+    --space-4: 40px;
+    --space-5: 50px;
+    --space-6: 60px;
+
+    /*
+    ** Colors
+    **/
+    --primary: #44AC33;
+    --black: black;
+    --grey: rgb(216, 216, 216);
+    --white: white;
+
+    /*
+    ** Font Variables (in ascending order)
+    */
+    --size-1: 0.4rem;
+    --size-2: 0.8rem;
+    --size-3: 1.2rem;
+    --size-4: 1.6rem;
+    --size-5: 2rem;
+    --size-6: 2.4rem;
+    --size-6: 2.8rem;
+    --size-7: 3.2rem;
+    --size-8: 3.6rem;
+    --size-8: 4rem;
+    --size-9: 4.4rem;
+    --size-10: 4.8rem;
+}
+
+.notifier {
+    display: flex;
+    background: #424242;
+    align-items: center;
+}
+
+.notifier>.left,
+.notifier>.right {
+    width: 50%;
+    padding: var(--space-1);
+    color: var(--white);
+    padding-left: var(--space-2);
+}
+
+.notifier>.left {
+    background: #28a745;
+    -webkit-clip-path: polygon(96% 0, 100% 46%, 96% 100%, 0 100%, 0 0);
+    clip-path: polygon(96% 0, 100% 46%, 96% 100%, 0 100%, 0 0);
+}
+
+.notifier>.right {
+    background: #424242;
+}
+
+@media(max-width: 576px){
+    .notifier{
+        font-size: var(--size-2);
+    }
+}

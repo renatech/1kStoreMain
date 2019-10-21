@@ -1,0 +1,17 @@
+
+@import 'mixins','variables';
+@import 'base.scss';
+
+// Option B: Include parts of Bootstrap
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "components";
+@import "utilities";
+
+// Optional
+@import "../node_modules/bootstrap/scss/bootstrap";
+ 
