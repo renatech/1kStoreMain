@@ -1643,17 +1643,33 @@
   .custom-nav .menu-btn {
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center;
     justify-content: center;
-    width: 35px;
+    width: 25px;
     height: 40px;
-    margin-right: 10px; }
+    margin-right: 15px; }
     .custom-nav .menu-btn span {
       display: block;
       width: 100%;
       margin: 5px;
       padding: 1px;
       background: grey; }
+    .custom-nav .menu-btn.is-open span {
+      position: absolute;
+      top: 50%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      transform-origin: center center;
+      -webkit-transform-origin: center center; }
+    .custom-nav .menu-btn.is-open span:nth-child(2) {
+      opacity: 0;
+      visibility: hidden;
+      display: none; }
+    .custom-nav .menu-btn.is-open span:first-child {
+      transform: rotate(45deg); }
+    .custom-nav .menu-btn.is-open span:last-child {
+      transform: rotate(-45deg); }
   .custom-nav .logo {
     width: 50px;
     margin-right: auto; }
@@ -1664,6 +1680,8 @@
   .custom-nav .primary-navlink {
     list-style: none;
     padding: var(--space-2);
+    margin-top: var(--space-1);
+    border-radius: 5px;
     width: 100%;
     position: absolute;
     top: 100%;
@@ -1723,6 +1741,11 @@
             .custom-nav .primary-navlink ul .dropdown:hover > .sublink, .custom-nav .primary-navlink ul .dropdown:focus > .sublink, .custom-nav .primary-navlink ul .link:hover > .sublink, .custom-nav .primary-navlink ul .link:focus > .sublink {
               visibility: visible;
               opacity: 1; } }
+  @media (max-width: 767px) {
+    .custom-nav .form {
+      width: 100%;
+      order: 7;
+      margin-top: var(--space-2); } }
   .custom-nav .secondary-navlink ul {
     list-style: none;
     padding: 0px; }
@@ -1735,6 +1758,28 @@
 
 .anchor--dark:hover, .anchor--dark:focus {
   color: black; }
+
+/*
+**Custom radio
+*/
+.custom-radio {
+  display: block; }
+  .custom-radio [type='radio'] {
+    width: 0px;
+    height: 0px;
+    visibility: hidden; }
+  .custom-radio .content {
+    width: auto;
+    height: auto;
+    padding: 5px var(--space-1);
+    margin-right: var(--space-3);
+    border: 1px solid #44AC33;
+    color: #44AC33;
+    border-radius: 5px; }
+  .custom-radio [type='radio']:checked ~ .content {
+    border: 1px solid #44AC33;
+    color: white;
+    background: #44AC33; }
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)

@@ -7,3 +7,32 @@
 .anchor--dark:hover, .anchor--dark:focus{
     color: black;   
 }
+
+
+/*
+**Custom radio
+*/
+.custom-radio{
+    display: block;
+
+    [type='radio']{
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    .content{
+        width: auto;
+        height: auto;
+        padding: 5px var(--space-1);
+        margin-right: var(--space-3);
+        border: 1px solid $primary;
+        color: $primary;
+        border-radius: 5px;
+    }
+
+    [type='radio']:checked ~ .content{
+        border: 1px solid $primary;
+        color: white;
+        background: $primary;
+    }
+}

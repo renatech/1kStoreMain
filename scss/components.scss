@@ -110,11 +110,12 @@
     .menu-btn{
         display: flex;
         flex-direction: column;
+        position: relative;
         align-items: center;
         justify-content: center;
-        width: 35px;
+        width: 25px;
         height: 40px;
-        margin-right: 10px;
+        margin-right: 15px;
 
         span{
             display: block;
@@ -122,6 +123,32 @@
             margin: 5px;
             padding: 1px;
             background: grey;
+        }
+
+        &.is-open{
+            span{
+                position: absolute;
+                top: 50%;
+                margin-top:  0px;
+                margin-bottom: 0px;
+                transform-origin: center center;
+                -webkit-transform-origin: center center;
+            }
+
+            span:nth-child(2){
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+            }
+
+            span:first-child{
+                transform: rotate(45deg);
+            }
+
+            span:last-child{
+                transform: rotate(-45deg);
+            }
+
         }
     } 
 
@@ -137,6 +164,8 @@
     .primary-navlink{
         list-style: none;
         padding: var(--space-2);
+        margin-top: var(--space-1);
+        border-radius: 5px;
         width: 100%;
         position: absolute;
         top: 100%;
@@ -216,6 +245,14 @@
             }
             list-style: none;
             padding: 0px;
+        }
+    }
+
+    .form{
+        @include breakpoint(xs){
+            width: 100%;
+            order: 7;
+            margin-top: var(--space-2)
         }
     }
 

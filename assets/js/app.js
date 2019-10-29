@@ -60,3 +60,20 @@ $(document).ready(function () {
         salesSlide.trigger('next.owl.carousel')
     })
 });
+
+
+/*
+**Switch between two modals
+*/
+
+function SwitchModals(e){
+    e.preventDefault();
+    var currentModal = e.target.dataset.from;
+    var targetModal = e.target.dataset.to;
+    $(currentModal).modal('hide')
+    $(targetModal).modal('show')
+}
+
+$('.loginLink').click(SwitchModals);
+$('.regLink').click(SwitchModals);
+

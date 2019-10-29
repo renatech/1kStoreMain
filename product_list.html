@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <title>Product list</title>
+</head>
+
+<body>
+
+    <!--Filter Modal-->
+    <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Filters</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Sex</h6>
+                    <div class="d-flex">
+                        <label class="custom-radio" for="male">
+                            <input type="radio" name="sex" id="male">
+                            <div class="content">Male</div>
+                        </label>
+                        <label class="custom-radio" for="female">
+                            <input type="radio" name="sex" id="female">
+                            <div class="content">Female</div>
+                        </label>
+                    </div>
+                    <hr>
+                    <h6>Size</h6>
+                    <div class="d-flex">
+                        <label class="custom-radio" for="small_size">
+                            <input type="radio" name="size" id="small_size">
+                            <div class="content">S</div>
+                        </label>
+                        <label class="custom-radio" for="medium_size">
+                            <input type="radio" name="size" id="medium_size">
+                            <div class="content">M</div>
+                        </label>
+                        <label class="custom-radio" for="large_size">
+                            <input type="radio" name="size" id="large_size">
+                            <div class="content">L</div>
+                        </label>
+                        <label class="custom-radio" for="xlarge_size">
+                            <input type="radio" name="size" id="xlarge_size">
+                            <div class="content">XL</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End filter modal-->
+
+    <!--Login Modal-->
+    <!--Filter Modal-->
+    <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary" id="exampleModalLabel">Welcome To the Club</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row justify-content-center">
+                    <div class="col-10 col-md-7">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="inputname">What should we call you?</label>
+                                <input type="text" class="form-control" id="inputname" placeholder="Hakeem">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputemail">What is your Email ?</label>
+                                <input type="email" class="form-control" id="inputemail"
+                                    placeholder="onethouasand@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            </div>
+                            <button class="btn btn-block btn-primary">
+                                Sign Up
+                            </button>
+                        </form>
+                        <p class="text-center mg-t--10 mg-b--10">
+                            Been here before? <a href="#" class="loginLink" data-from="#regModal" data-to="#loginModal">Login</a>
+                        </p>
+                        <p class="is-size--2 text-center">Or join with </p>
+
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Google</button></div>
+                            <div class="col-6 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Facebook</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Login Modal-->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary" id="exampleModalLabel">Welcome Back</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row justify-content-center">
+                    <div class="col-10 col-md-7">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="inputemail2">Username or Email</label>
+                                <input type="text" class="form-control" id="inputemail2"
+                                    placeholder="onethouasand@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword2">Password</label>
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                            </div>
+                            <button class="btn btn-block btn-primary">
+                                Sign In
+                            </button>
+                        </form>
+                        <div class="row justify-content-between">
+                            <div class="col-6 mg-t--10 mg-b--10">
+                                <a href="#" class=" anchor--dark">Forgotten Password ?</a>
+                            </div>
+                            <div class="col-6 text-left mg-t--10 mg-b--10">
+                                New Here ? <a href="#" class="regLink" data-from="#loginModal" data-to="#regModal">Sign Up</a>
+                            </div>
+                        </div>
+                        <p class="is-size--2 text-center">Or join with </p>
+
+                        <div class="row justify-content-center">
+                            <div class="col-5 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Google</button></div>
+                            <div class="col-5 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Facebook</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notifier">
+        <div class="left">
+            Free deliveries for orders above 10k
+        </div>
+        <div class="right">
+            7 days policy return
+        </div>
+    </div>
+
+    <!--Container Start-->
+    <div class="container" id="product_list">
+        <!--Start Navbar-->
+        <header class="custom-nav d-flex flex-wrap justify-content-between align-items-center">
+            <a href="#" class="menu-btn d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <a href="/" class="logo">
+                <img src="assets/img/logo.png" alt="1k store logo" class="img-fluid">
+            </a>
+            <nav class="primary-navlink d-none d-lg-block">
+                <ul>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Jeans
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Polos
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Polos
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Trouser
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Underwear
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Others
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="form  d-sm-block">
+                <div class="input-group mb-3">
+                    <input type="search" class="form-control form-control-lg bg-transparent"
+                        placeholder="Try red polo, blue short...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-lg" type="button">
+                            <i data-feather="search" width="18" height="18"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <aside class="secondary-navlink">
+                <ul class="d-flex justify-content-between align-items-center">
+                    <li class="link mx-2">
+                        <a href="#" class="anchor--dark">
+                            <i data-feather="shopping-cart" width="25" height="25"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown mx-2">
+                        <a href="#" data-target="#regModal" data-toggle="modal" class="anchor--dark">
+                            <i data-feather="user" width="25" height="25"></i>
+                            <span class="dropdown-arrow">
+                                <i data-feather="chevron-down" width="12" height="12"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </header>
+        <!--End Navbar-->
+
+
+        <!--Featured products start-->
+        <section class="pd-t--40 pd-b--40">
+            <!--Scroll header start-->
+            <div class="row align-content-center justify-content-between">
+                <div class="col-7">
+                    Blue Shirts
+                </div>
+                <div class="col-3 col-md-1 d-flex justify-content-between">
+                    Filter
+                    <a href="" class="anchor--dark" id="featuredNavRight" data-toggle="modal"
+                        data-target="#filterModal">
+                        <i data-feather="filter"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="row pd--10">
+                <a href="" class="col-5 col-md-2 d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
+                    <img src="assets/img/item/jean_trousers.png" class="img-fluid" alt="jean_trousers">
+                    <span class="d-block text-center text-capitalize p-1">
+                        jean trousers
+                    </span>
+                    <!--Star Rating Start-->
+                    <div class="d-flex justify-content-center" title="5 star rating">
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                    </div>
+                    <!--Star Rating end-->
+                    <!--Rating start-->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span href="#" class="d-inline-block m-2" title="Add to Favourite">
+                            <i data-feather="heart" width="18" height="18"></i>
+                        </span>
+                        <span href="#" class="d-inline-block m-2" title="Add to Cart">
+                            <i data-feather="shopping-cart" width="18" height="18"></i>
+                        </span>
+                    </div>
+                    <!--Rating End-->
+                </a>
+
+                <a href="" class="col-5 col-md-2 d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
+                    <img src="assets/img/item/jean_trousers.png" class="img-fluid" alt="jean_trousers">
+                    <span class="d-block text-center text-capitalize p-1">
+                        jean trousers
+                    </span>
+                    <!--Star Rating Start-->
+                    <div class="d-flex justify-content-center" title="5 star rating">
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                    </div>
+                    <!--Star Rating end-->
+                    <!--Rating start-->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span href="#" class="d-inline-block m-2" title="Add to Favourite">
+                            <i data-feather="heart" width="18" height="18"></i>
+                        </span>
+                        <span href="#" class="d-inline-block m-2" title="Add to Cart">
+                            <i data-feather="shopping-cart" width="18" height="18"></i>
+                        </span>
+                    </div>
+                    <!--Rating End-->
+                </a>
+            </div>
+            <!--Scroll header end-->
+
+            <!--Start Load button-->
+            <div class="my-3">
+                <button class="btn btn-block btn-outline-primary">
+                    Load More
+                </button>
+            </div>
+            <!--End Load button-->
+        </section>
+
+
+        <!--Footer Start-->
+        <footer class="row pd-b--30">
+            <div class="col-6 col-md-4 pd-t--30">
+                <h3 class="text-uppercase is-size--2 font-weight-bold">STORE</h3>
+                <div class="my-3 is-size--2">
+                    <p>
+                        Opening Time: <br>
+                        Monday to Saturday <br>
+                        <b>8am - 7pm</b> <br><br>
+                        Sunday - <b>12pm - 7pm</b>
+                    </p>
+
+                    <address style="font-style: normal">Location - 4 oko ogbo, Airport road, <br> Benin city, Edo state.
+                    </address>
+                    <a href="">Careers at 1k</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 pd-t--30">
+                <h3 class="text-uppercase is-size--2 font-weight-bold">LET US HELP YOU</h3>
+                <div class="my-3 is-size--2">
+                    <a href="" class="anchor--dark">FAQ</a> <br><br>
+                    <a href="" class="anchor--dark">Terms & conditions</a><br><br>
+                    <a href="" class="anchor--dark">Customer Service</a><br><br>
+                    <a href="" class="anchor--dark">Orders & Returns</a><br><br>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+
+                <div class="row">
+                    <div class="col-6 col-md-12 pd-t--30">
+                        <h3 class="text-uppercase is-size--2 font-weight-bold">FOLLOW US ON SOCIAL MEDIA</h3>
+                        <div class="my-3 is-size--2 social social-row">
+                            <ul>
+                                <li>
+                                    <a href="#" title="facebook" aria-details="facebook"><span
+                                            class="flaticon-facebook"></span></a>
+                                    <a href="#" title="instagram" aria-details="instagram"><span
+                                            class="flaticon-instagram"></span></a>
+                                    <a href="#" title="twitter" aria-details="twitter"><span
+                                            class="flaticon-twitter"></span></a>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-12 pd-t--30">
+                        <h3 class="text-uppercase is-size--2 font-weight-bold">CONTACT US</h3>
+                        <div class="my-3 is-size--2 social social-row">
+                            <ul>
+                                <li>
+                                    <a href="#" title="whatsapp" aria-details="whatsapp"><span
+                                            class="flaticon-whatsapp"></span></a>
+                                    <a href="#" title="email" aria-details="email"><span
+                                            class="flaticon-email"></span></a>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Footer End-->
+    </div>
+    <!--Container End-->
+
+    <!--Extra footer added-->
+    <div class="bg-success text-center text-white pd--10">
+        More franchises coming soon across nigeria
+    </div>
+</body>
+<script type="text/javascript" src="assets/js/feather.js"></script>
+<script>
+    feather.replace()
+</script>
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+</html>
