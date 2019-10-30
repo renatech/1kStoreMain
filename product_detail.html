@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <title>Delivery Option</title>
+</head>
+
+<body>
+
+    <!--Login Modal-->
+    <!--Filter Modal-->
+    <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary" id="exampleModalLabel">Welcome To the Club</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row justify-content-center">
+                    <div class="col-10 col-md-7">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="inputname">What should we call you?</label>
+                                <input type="text" class="form-control" id="inputname" placeholder="Hakeem">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputemail">What is your Email ?</label>
+                                <input type="email" class="form-control" id="inputemail"
+                                    placeholder="onethouasand@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            </div>
+                            <button class="btn btn-block btn-primary">
+                                Sign Up
+                            </button>
+                        </form>
+                        <p class="text-center mg-t--10 mg-b--10">
+                            Been here before? <a href="#" class="loginLink" data-from="#regModal"
+                                data-to="#loginModal">Login</a>
+                        </p>
+                        <p class="is-size--2 text-center">Or join with </p>
+
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Google</button></div>
+                            <div class="col-6 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Facebook</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Login Modal-->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary" id="exampleModalLabel">Welcome Back</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row justify-content-center">
+                    <div class="col-10 col-md-7">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="inputemail2">Username or Email</label>
+                                <input type="text" class="form-control" id="inputemail2"
+                                    placeholder="onethouasand@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword2">Password</label>
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                            </div>
+                            <button class="btn btn-block btn-primary">
+                                Sign In
+                            </button>
+                        </form>
+                        <div class="row justify-content-between">
+                            <div class="col-6 mg-t--10 mg-b--10">
+                                <a href="#" class=" anchor--dark">Forgotten Password ?</a>
+                            </div>
+                            <div class="col-6 text-left mg-t--10 mg-b--10">
+                                New Here ? <a href="#" class="regLink" data-from="#loginModal" data-to="#regModal">Sign
+                                    Up</a>
+                            </div>
+                        </div>
+                        <p class="is-size--2 text-center">Or join with </p>
+
+                        <div class="row justify-content-center">
+                            <div class="col-5 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Google</button></div>
+                            <div class="col-5 col-md-4"><button
+                                    class="btn btn-block btn-outline-secondary">Facebook</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notifier">
+        <div class="left">
+            Free deliveries for orders above 10k
+        </div>
+        <div class="right">
+            24 hours return policy
+        </div>
+    </div>
+
+    <!--Container Start-->
+    <div class="container" id="product_list">
+        <!--Start Navbar-->
+        <!--Start Navbar-->
+        <header class="custom-nav d-flex flex-wrap justify-content-between align-items-center">
+            <a href="#" class="menu-btn d-lg-none" id="categoryToggle" data-tag="#categoryNavLink">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <a class="logo" href="">
+                <img src="assets/img/logo.png" alt="1k store logo" class="img-fluid">
+            </a>
+            <nav class="primary-navlink d-none d-lg-block" id="categoryNavLink">
+                <ul>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Jeans
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="product_list.html" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Polos
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Polos
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Trouser
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Underwear
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-head">
+                            Others
+                        </span>
+                        <span class="dropdown-arrow">
+                            <i data-feather="chevron-down" width="12" height="12"></i>
+                        </span>
+                        <ul class="sublink">
+                            <li class="py-1"><a href="#" class="anchor--dark">Mens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Womens</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Boys</a></li>
+                            <li class="py-1"><a href="#" class="anchor--dark">Girls</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="form  d-sm-block">
+                <div class="input-group mb-3">
+                    <input type="search" class="form-control form-control-lg bg-transparent"
+                        placeholder="Try red polo, blue short...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-lg" type="button">
+                            <i data-feather="search" width="18" height="18"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <aside class="secondary-navlink">
+                <ul class="d-flex justify-content-between align-items-center">
+                    <li class="link mx-2">
+                        <a href="#" class="anchor--dark">
+                            <i data-feather="shopping-cart" width="25" height="25"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown mx-2">
+                        <a href="#" data-target="#regModal" data-toggle="modal" class="anchor--dark">
+                            <i data-feather="user" width="25" height="25"></i>
+                            <span class="dropdown-arrow">
+                                <i data-feather="chevron-down" width="12" height="12"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </header>
+        <!--End Navbar-->
+
+        <!--Breacrumb-->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="anchor--dark">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Jean Trouser</li>
+            </ol>
+        </nav>
+        <!--Featured products start-->
+        <section class="pd-t--40 pd-b--40">
+
+            <div class="row">
+                <div class="col-8 col-md-5">
+                    <img src="assets/img/item/jean_trousers.png" alt="" class="img-fluid img-thumbnail">
+                </div>
+                <div class="col-12 col-md-5">
+                    <h1 class="is-size--4 is-size-md-6">Jean Trouser</h1>
+                    <!--Star Rating Start-->
+                    <div class="d-flex my-2" title="5 star rating">
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="20" height="20"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="20" height="20"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="20" height="20"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="20" height="20"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning">
+                            <i data-feather="star" width="20" height="20"></i>
+                        </span>
+                    </div>
+                    <div class="my-3 row align-items-center">
+                        <div class="col-md-6 col-12 my-1 d-flex align-items-center">
+                            <div class="mr-2">
+                                Sex:
+                            </div>
+                            <div class="d-flex align-content-center">
+                                <label class="custom-radio" for="male">
+                                    <input type="radio" name="sex" id="male">
+                                    <div class="content">M</div>
+                                </label>
+                                <label class="custom-radio" for="female">
+                                    <input type="radio" name="sex" id="female">
+                                    <div class="content">F</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 my-1 d-flex align-items-center">
+                            <div class="mr-2">
+                                Size:
+                            </div>
+                            <div class="d-flex align-content-center">
+                                <label class="custom-radio" for="male">
+                                    <input type="radio" name="size" id="small">
+                                    <div class="content">S</div>
+                                </label>
+                                <label class="custom-radio" for="medium">
+                                    <input type="radio" name="size" id="medium">
+                                    <div class="content">M</div>
+                                </label>
+                                <label class="custom-radio" for="large">
+                                    <input type="radio" name="size" id="large">
+                                    <div class="content">L</div>
+                                </label>
+                                <label class="custom-radio" for="xtraLarge">
+                                    <input type="radio" name="size" id="xtraLarge">
+                                    <div class="content">XL</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 my-1 d-flex align-items-center">
+                            <div class="mr-2">
+                                Quantity:
+                            </div>
+                            <div class="d-flex align-content-center">
+                                <label class="custom-radio" for="q1">
+                                    <input type="radio" name="quantity" id="q1">
+                                    <div class="content">1</div>
+                                </label>
+                                <label class="custom-radio" for="q2">
+                                    <input type="radio" name="quantity" id="q2">
+                                    <div class="content">2</div>
+                                </label>
+                                <label class="custom-radio" for="q3">
+                                    <input type="radio" name="quantity" id="q3">
+                                    <div class="content">3</div>
+                                </label>
+                                <label class="custom-radio" for="q4">
+                                    <input type="radio" name="quantity" id="q4">
+                                    <div class="content">4</div>
+                                </label>
+                                <label class="custom-radio" for="q5">
+                                    <input type="radio" name="quantity" id="q5">
+                                    <div class="content">5</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 row">
+                        <a href="#" class="anchor--dark f-block col-6">
+                            <i data-feather="heart" width="20" height="20"></i>
+                            Add to favorite
+                        </a>
+                        <a href="#" class="anchor--dark f-block col-6">
+                            <i data-feather="shopping-cart" width="20" height="20"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                    <div class="my-3 p-2 row">
+                        <button class="btn btn-block btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!--Scroll header end-->
+        </section>
+
+        <!--Similar Products-->
+        <section class="pd-t--40 pd-b--40">
+            <!--Scroll header start-->
+            <div class="row align-content-center justify-content-between">
+                <div class="col-7">
+                    Similar products
+                </div>
+                <div class="col-3 col-md-1 d-flex justify-content-between">
+                    <a href="" class="anchor--dark" id="salesNavLeft">
+                        <i data-feather="chevron-left"></i>
+                    </a>
+                    <a href="" class="anchor--dark" id="salesNavRight">
+                        <i data-feather="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="owl-carousel" id="sales-carousel">
+                    <a href="" class="d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
+                            <img src="assets/img/item/longsleeve.png" class="img-fluid" alt="jean_trousers">
+                            <span class="d-block text-center text-capitalize p-1">
+                                Blue Long Sleeve
+                            </span>
+                            <!--Star Rating Start-->
+                            <div class="d-flex justify-content-center" title="5 star rating">
+                                <span class="d-inline-block mx-1 text-warning ">
+                                    <i data-feather="star" width="14" height="14"></i>
+                                </span>
+                                <span class="d-inline-block mx-1 text-warning ">
+                                    <i data-feather="star" width="14" height="14"></i>
+                                </span>
+                                <span class="d-inline-block mx-1 text-warning ">
+                                    <i data-feather="star" width="14" height="14"></i>
+                                </span>
+                                <span class="d-inline-block mx-1 text-warning ">
+                                    <i data-feather="star" width="14" height="14"></i>
+                                </span>
+                                <span class="d-inline-block mx-1 text-warning">
+                                    <i data-feather="star" width="14" height="14"></i>
+                                </span>
+                            </div>
+                            <!--Star Rating end-->
+                            <!--Rating start-->
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span href="#" class="d-inline-block m-2" title="Add to Favourite">
+                                    <i data-feather="heart" width="18" height="18"></i>
+                                </span>
+                                <span href="#" class="d-inline-block m-2" title="Add to Cart">
+                                    <i data-feather="shopping-cart" width="18" height="18"></i>
+                                </span>
+                            </div>
+                            <!--Rating End-->
+                        </a>
+                <a href="" class="d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
+                    <img src="assets/img/item/feat_2.png" class="img-fluid" alt="jean_trousers">
+                    <span class="d-block text-center text-capitalize p-1">
+                        Flowered Gown
+                    </span>
+                    <!--Star Rating Start-->
+                    <div class="d-flex justify-content-center" title="5 star rating">
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                    </div>
+                    <!--Star Rating end-->
+                    <!--Rating start-->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span href="#" class="d-inline-block m-2" title="Add to Favourite">
+                            <i data-feather="heart" width="18" height="18"></i>
+                        </span>
+                        <span href="#" class="d-inline-block m-2" title="Add to Cart">
+                            <i data-feather="shopping-cart" width="18" height="18"></i>
+                        </span>
+                    </div>
+                    <!--Rating End-->
+                </a>
+                <a href="" class="d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
+                    <img src="assets/img/item/feat_3.png" class="img-fluid" alt="jean_trousers">
+                    <span class="d-block text-center text-capitalize p-1">
+                        Off Shoulder top
+                    </span>
+                    <!--Star Rating Start-->
+                    <div class="d-flex justify-content-center" title="5 star rating">
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                    </div>
+                    <!--Star Rating end-->
+                    <!--Rating start-->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span href="#" class="d-inline-block m-2" title="Add to Favourite">
+                            <i data-feather="heart" width="18" height="18"></i>
+                        </span>
+                        <span href="#" class="d-inline-block m-2" title="Add to Cart">
+                            <i data-feather="shopping-cart" width="18" height="18"></i>
+                        </span>
+                    </div>
+                    <!--Rating End-->
+                </a>
+                <a href="" class="d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
+                    <img src="assets/img/item/sales_3.png" class="img-fluid" alt="jean_trousers">
+                    <span class="d-block text-center text-capitalize p-1">
+                        Green short
+                    </span>
+                    <!--Star Rating Start-->
+                    <div class="d-flex justify-content-center" title="5 star rating">
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning ">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                        <span class="d-inline-block mx-1 text-warning">
+                            <i data-feather="star" width="14" height="14"></i>
+                        </span>
+                    </div>
+                    <!--Star Rating end-->
+                    <!--Rating start-->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span href="#" class="d-inline-block m-2" title="Add to Favourite">
+                            <i data-feather="heart" width="18" height="18"></i>
+                        </span>
+                        <span href="#" class="d-inline-block m-2" title="Add to Cart">
+                            <i data-feather="shopping-cart" width="18" height="18"></i>
+                        </span>
+                    </div>
+                    <!--Rating End-->
+                </a>
+
+            </div>
+        </section>
+
+
+        <!--Footer Start-->
+        <!--Footer Start-->
+    <footer class="row pd-b--30">
+      <div class="col-6 col-md-4 pd-t--30">
+        <h3 class="text-uppercase is-size--2 font-weight-bold">STORE</h3>
+        <div class="my-3 is-size--2">
+          <p>
+            Opening Time: <br>
+            Monday to Saturday <br>
+            <b>10am - 7pm</b> <br><br>
+            Sunday - <b>12pm - 7pm</b><br><br>
+            <b>Call us - </b> 07039137349
+          </p>
+
+          <address style="font-style: normal">Location - 4 oko ogbo, Airport road, <br> Benin city, Edo state.</address>
+          <a href="">Careers at 1k</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 pd-t--30">
+        <h3 class="text-uppercase is-size--2 font-weight-bold">LET US HELP YOU</h3>
+        <div class="my-3 is-size--2">
+          <a href="" class="anchor--dark">FAQ</a> <br><br>
+          <a href="" class="anchor--dark">Terms & conditions</a><br><br>
+          <a href="" class="anchor--dark">Customer Service</a><br><br>
+          <a href="" class="anchor--dark">Orders & Returns</a><br><br>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+
+        <div class="row">
+          <div class="col-6 col-md-12 pd-t--30">
+            <h3 class="text-uppercase is-size--2 font-weight-bold">FOLLOW US ON SOCIAL MEDIA</h3>
+            <div class="my-3 is-size--2 social social-row">
+              <ul>
+                <li>
+                  <a href="#" title="facebook" aria-details="facebook"><span class="flaticon-facebook"></span></a>
+                  <a href="#" title="instagram" aria-details="instagram"><span class="flaticon-instagram"></span></a>
+                  <a href="#" title="twitter" aria-details="twitter"><span class="flaticon-twitter"></span></a>
+                </li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-md-12 pd-t--30">
+            <h3 class="text-uppercase is-size--2 font-weight-bold">CONTACT US</h3>
+            <div class="my-3 is-size--2 social social-row">
+              <ul>
+                <li>
+                  <a href="#" title="whatsapp" aria-details="whatsapp"><span class="flaticon-whatsapp"></span></a>
+                  <a href="#" title="email" aria-details="email"><span class="flaticon-email"></span></a>
+                </li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Footer End-->
+        <!--Footer End-->
+    </div>
+    <!--Container End-->
+
+    <!--Extra footer added-->
+    <div class="bg-success text-center text-white pd--10">
+        More franchises coming soon across nigeria
+    </div>
+</body>
+<script type="text/javascript" src="assets/js/feather.js"></script>
+<script>
+    feather.replace()
+</script>
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+</html>

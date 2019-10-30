@@ -14,17 +14,19 @@
 */
 .custom-radio{
     display: block;
+    padding: 0px;
 
     [type='radio']{
         width: 0px;
         height: 0px;
         visibility: hidden;
+        display: none;
     }
     .content{
         width: auto;
         height: auto;
         padding: 5px var(--space-1);
-        margin-right: var(--space-3);
+        margin-right: var(--space-1);
         border: 1px solid $primary;
         color: $primary;
         border-radius: 5px;
