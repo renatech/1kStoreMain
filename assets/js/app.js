@@ -77,3 +77,21 @@ function SwitchModals(e){
 $('.loginLink').click(SwitchModals);
 $('.regLink').click(SwitchModals);
 
+/*
+**Toggle Navlink categories
+*/
+$('#categoryToggle').click(function(e){
+    e.preventDefault();
+    var category = e.target.dataset.tag;
+    $(category).toggleClass('d-none');
+    e.target.classList.toggle('is-open');
+})
+
+$(document).on('click',function(e){
+    $closest = $(e.target)
+    //Close category links if it is not the targeted element
+    if(!$closest.closest('#categoryNavLink').length && !$(e.target).is('#categoryToggle')) {
+        $('#categoryNavLink').addClass('d-none');
+        $('#categoryToggle').removeClass('is-open');
+    }
+})

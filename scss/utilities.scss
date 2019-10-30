@@ -36,3 +36,10 @@
         background: $primary;
     }
 }
+
+/*
+** Customize bootstrap breadcrum
+*/
+.breadcrumb-item.active{
+    color: black !important;
+}

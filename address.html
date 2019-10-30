@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/fonts/flaticon.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <title>Product list</title>
+    <title>Address</title>
 </head>
 
 <body>
@@ -304,101 +304,39 @@
         <!--Featured products start-->
         <section class="pd-t--40 pd-b--40">
             <!--Scroll header start-->
-            <div class="row align-content-center justify-content-between">
-                <div class="col-7">
-                    Blue Shirts
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="anchor--dark">Shopping Page</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="anchor--dark">Delivery Option</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Location</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-12 col-md-6 mx-1">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="address">Home address</label>
+                                <input type="text" class="form-control bg-transparent" id="address" placeholder="Address">
+                            </div>
+                            <div class="form-group">
+                                <label for="bus_stop">Bus stop</label>
+                                <input type="text" class="form-control bg-transparent" id="bus_stop"
+                                    placeholder="Address">
+                            </div>
+                            <div class="row justify-content-between px-3 py-3">
+                                <label for="inputPassword">Save home address</label>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary">
+                                Proceed to payment
+                            </button>
+                        </form>
                 </div>
-                <div class="col-3 col-md-1 d-flex justify-content-between">
-                    Filter
-                    <a href="" class="anchor--dark" id="featuredNavRight" data-toggle="modal"
-                        data-target="#filterModal">
-                        <i data-feather="filter"></i>
-                    </a>
-                </div>
-            </div>
-            <hr>
-            <div class="row pd--10">
-                <a href="" class="col-5 col-md-2 d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
-                    <img src="assets/img/item/jean_trousers.png" class="img-fluid" alt="jean_trousers">
-                    <span class="d-block text-center text-capitalize p-1">
-                        jean trousers
-                    </span>
-                    <!--Star Rating Start-->
-                    <div class="d-flex justify-content-center" title="5 star rating">
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                    </div>
-                    <!--Star Rating end-->
-                    <!--Rating start-->
-                    <div class="d-flex justify-content-center align-items-center">
-                        <span href="#" class="d-inline-block m-2" title="Add to Favourite">
-                            <i data-feather="heart" width="18" height="18"></i>
-                        </span>
-                        <span href="#" class="d-inline-block m-2" title="Add to Cart">
-                            <i data-feather="shopping-cart" width="18" height="18"></i>
-                        </span>
-                    </div>
-                    <!--Rating End-->
-                </a>
-
-                <a href="" class="col-5 col-md-2 d-block bg-white rounded-lg p-0 mx-1 anchor--dark">
-                    <img src="assets/img/item/jean_trousers.png" class="img-fluid" alt="jean_trousers">
-                    <span class="d-block text-center text-capitalize p-1">
-                        jean trousers
-                    </span>
-                    <!--Star Rating Start-->
-                    <div class="d-flex justify-content-center" title="5 star rating">
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning ">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                        <span class="d-inline-block mx-1 text-warning">
-                            <i data-feather="star" width="14" height="14"></i>
-                        </span>
-                    </div>
-                    <!--Star Rating end-->
-                    <!--Rating start-->
-                    <div class="d-flex justify-content-center align-items-center">
-                        <span href="#" class="d-inline-block m-2" title="Add to Favourite">
-                            <i data-feather="heart" width="18" height="18"></i>
-                        </span>
-                        <span href="#" class="d-inline-block m-2" title="Add to Cart">
-                            <i data-feather="shopping-cart" width="18" height="18"></i>
-                        </span>
-                    </div>
-                    <!--Rating End-->
-                </a>
             </div>
             <!--Scroll header end-->
-
-            <!--Start Load button-->
-            <div class="my-3">
-                <button class="btn btn-block btn-outline-primary">
-                    Load More
-                </button>
-            </div>
-            <!--End Load button-->
         </section>
 
 
