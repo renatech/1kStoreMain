@@ -12,6 +12,7 @@ $(document).ready(function () {
     var tShirtSlide = $('#tShirt-carousel')
     var tShirtNavLeft = $('#tShirtNavLeft')
     var tShirtNavRight = $('#tShirtNavRight')
+    var heroSlide = $('#hero-carousel');
 
     //General setting for slide on home page
     var generalSetting = {
@@ -34,7 +35,16 @@ $(document).ready(function () {
     featuredSlide.owlCarousel(generalSetting);
     salesSlide.owlCarousel(generalSetting);
     poloSlide.owlCarousel(generalSetting)
-    tShirtSlide.owlCarousel(generalSetting)
+    tShirtSlide.owlCarousel(generalSetting);
+    heroSlide.owlCarousel({
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        loop:true,
+        dotsEach: true,
+    });
+
 
     /**
      * @description Trigger event for pushing to previous slide in featured carousel
@@ -67,7 +77,7 @@ $(document).ready(function () {
         e.preventDefault()
         salesSlide.trigger('next.owl.carousel')
     })
-        /**
+    /**
      * @description Trigger event for pushing to previous slide in polo carousel
      */
     poloNavLeft.on('click', function (e) {
