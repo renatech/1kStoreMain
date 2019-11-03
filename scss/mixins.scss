@@ -152,3 +152,20 @@
         }
     }
 }
+
+@mixin navbarDropdown {
+    display: block;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: var(--space-2);
+    background: white; 
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    z-index: 3;
+    
+    @content;
+}
